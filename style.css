@@ -45,6 +45,8 @@ body {
   display: flex;
   justify-content: center;
   box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid #FF8A00;
   margin: 14px 0 24px 0;
 }
 
@@ -53,8 +55,6 @@ body {
   height: 36px;
   background-color: #ffffff;
   color: #000000;
-  border: 1px solid #FF8A00;
-  border-radius: 5px 0 0 5px;
   font-size: 14px;
   cursor: pointer;
 }
@@ -64,8 +64,6 @@ body {
   height: 36px;
   background-color: #ffffff;
   color: #000000;
-  border: 1px solid #FF8A00;
-  border-radius: 0 5px 5px 0;
   font-size: 14px;
   cursor: pointer;
 }
@@ -227,6 +225,7 @@ input[type=button] {
   color: #FF8A00;
   font-size: 14px;
   margin: auto 0;
+  cursor: pointer;
 }
 
 .last_block {

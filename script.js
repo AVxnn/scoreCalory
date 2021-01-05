@@ -10,11 +10,10 @@ let activityChecks = document.querySelectorAll('.check');
 let buttonResult = document.querySelector('.button_result');
 
 let help = document.querySelector('.last_very_help');
-
 let down = document.querySelector('.last_very_down');
-
 let up = document.querySelector('.last_very_up');
 
+let resetButton = document.querySelector('.delete_text_inputing')
 
 let stats = [];
 
@@ -74,25 +73,53 @@ for (let check of activityChecks){
             document.querySelector('.text_very_high').classList.add('checkeding');
             stats[4] = 1.9;
         }
-
     })
 
 }
 
 buttonResult.addEventListener('click', function (){
+    if (stats == ''){
+        alert('Вы не ввели данные')
+    }
     if (stats[1] < 13){
         alert('Введите возраст больше 13 лет')
     } else if (stats[1] > 80){
         alert('Введите возраст меньше 80 лет')
     }
+
+    if (stats[2] < 50){
+        alert('Введите рост больше 50 см')
+    } else if (stats[2] > 200){
+        alert('Введите рост меньше 200 см')
+    }
+
+    if (stats[3] < 20){
+        alert('Введите вес больше 20 кг')
+    } else if (stats[3] > 300){
+        alert('Введите вес меньше 300 кг')
+    }
+
     if (stats[0] === 'men'){
         stats[5] = (10 * stats[3] + 6.25 * stats[2] + 5 * stats[1] + 5) * stats[4]
-
+        help.innerHTML = Math.round(stats[5]);
+        down.innerHTML = Math.round(stats[5] * 0.7);
+        up.innerHTML = Math.round(stats[5] * 1.3);
     }
     if (stats[0] === 'women'){
         stats[5] = (10 * stats[3] + 6.25 * stats[2] + 5 * stats[1] - 161) * stats[4]
+        help.innerHTML = Math.round(stats[5]);
+        down.innerHTML = Math.round(stats[5] * 0.7);
+        up.innerHTML = Math.round(stats[5] * 1.3);
     }
-    help.innerHTML = Math.round(stats[5]);
-    down.innerHTML = Math.round(stats[5] * 0.7);
-    up.innerHTML = Math.round(stats[5] * 1.3);
+})
+
+
+resetButton.addEventListener('click', function () {
+    help.innerHTML = '0';
+    down.innerHTML = '0';
+    up.innerHTML = '0';
+    age.value = '';
+    height.value = '';
+    ves.value = '';
+    stats = [];
 })
