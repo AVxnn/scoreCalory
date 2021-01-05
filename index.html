@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Счетчик калорий</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1 class="main_text">Счетчик калорий</h1>
+    <section class="main_block">
+        <h2 class="text_man_and_women">Пол</h2>
+        <label for="" class="label_men_women">
+            <input type="button" value="Мужчина" class="men borderColor">
+            <input type="button" value="Женщина" class="women">
+        </label>
+
+<div class="flex_nav_block">
+
+    <div class="main_block_age">
+        <div class="block_age">
+            <h2 class="text_age">Возраст</h2>
+            <span class="span_age">лет</span>
+        </div>
+        <label for="" class="label_age">
+            <input type="text" class="input_age" value="">
+        </label>
+    </div>
+
+    <div class="main_block_height">
+        <div class="block_height">
+            <h2 class="text_height">Рост</h2>
+            <span class="span_height">см</span>
+        </div>
+        <label for="" class="label_height">
+            <input type="text" class="input_height" value="">
+        </label>
+    </div>
+
+    <div class="main_block_ves">
+        <div class="block_ves">
+            <h2 class="text_ves">Вес</h2>
+            <span class="span_ves">кг</span>
+        </div>
+        <label for="" class="label_ves">
+            <input type="text" class="input_ves" value="">
+        </label>
+    </div>
+
+</div>
+        <h2 class="text_fiz_activity">Физическая активность</h2>
+        <label for="1" class="label_activity">
+            <input name="fff" id="1" type="radio" class="check minimal_check">
+            <p class="text_activity"><span class="text_minimal">Минимальная</span> <br>Сидячая работа и нет физических нагрузок</p>
+        </label>
+        <label for="2" class="label_activity">
+            <input name="fff" id="2" type="radio" class="check lower_check ">
+            <p class="text_activity"><span class="text_lower">Низкая</span> <br>Редкие, нерегулярные тренировки, активность в быту</p>
+        </label>
+        <label for="3" class="label_activity">
+            <input name="fff" id="3" type="radio" class="check medium_check ">
+            <p class="text_activity"><span class="text_medium">Средняя</span> <br>Тренировки 3-5 раз в неделю</p>
+        </label>
+        <label for="4" class="label_activity">
+            <input name="fff" id="4" type="radio" class="check high_check">
+            <p class="text_activity"><span class="text_high">Высокая</span> <br>Тренировки 6-7 раз в неделю</p>
+        </label>
+        <label for="5" class="label_activity">
+            <input name="fff" id="5" type="radio" class="check very_high_check">
+            <p class="text_activity"><span class="text_very_high">Очень высокая</span> <br>Больше 6 тренировок в неделю и физическая работа</p>
+        </label>
+
+
+        <div class="footer">
+            <input type="button" value="Рассчитать" class="button_result">
+            <span class="delete_text_inputing">X Отчистить поля и расчет</span>
+        </div>
+
+
+    </section>
+    <section class="last_block">
+        <h2 class="text_last">Ваша норма калорий</h2>
+        <div class="last_text_nav">
+            <p class="text_activity aba"><span class="last_very_help">0 </span> ккал <br>поддержание <br> веса</p>
+
+            <p class="text_activity aba"><span class="last_very_down">0 </span> ккал <br>снижение <br> веса</p>
+
+            <p class="text_activity aba"><span class="last_very_up">0 </span> ккал <br>набор <br> веса</p>
+        </div>
+    </section>
+</div>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
